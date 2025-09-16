@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Oppgave 1</title>
+  <title>Eksempel 1</title>
 </head>
 <body>
-<h3>Oppgave 1</h3>
-<form method="post" action="oppgave-1.php" id="oppgave1" name="oppgave1">
-Fornavn <input type="text" id="fornavn" name="fornavn" required /> <br />
-Etternavn <input type="text" id="etternavn" name="etternavn" required /> <br />
-<input type="submit" value="Fortsett" id="fortsett" name="fortsett" />
-<input type="reset" value="Nullstill" name="nullstill" id="nullstill" /> <br />
-</form>
+  <h3>Eksempel 1</h3>
+    
+  <form method="post" action="tema01/eksempler/eksempel-1.php" id="eksempel1" name="eksempel1">
+    Fornavn <input type="text" id="fornavn" name="fornavn" required /> <br />
+    Etternavn <input type="text" id="etternavn" name="etternavn" required /> <br />
+    <input type="submit" value="Fortsett" id="fortsett" name="fortsett" />
+    <input type="reset" value="Nullstill" name="nullstill" id="nullstill" /> <br />
+  </form>
 </body>
 </html>
 
-<?php
-$fornavn=$_post['fornavn'];
-$etternavn=$_post['etternavn'];
+<?php    /* Eksempel 1 */
+/*
+/*    Programmet mottar fra et HTML-skjema et fornavn og et etternavn ved POST-metoden
+/*    Programmet skriver ut en "god dag"-melding med personens navn 
+*/
+  $fornavn=$_POST ["fornavn"];
+  $etternavn=$_POST ["etternavn"];  
+	
+  print ("God dag $fornavn $etternavn <br />");  
+?>
 
-print ("God dag $fornavn $etternavn<br/>");
